@@ -1,20 +1,24 @@
 {
-  "name": "ReactNativeEverywhere",
+  "name": "react-native-everywhere",
   "version": "0.0.1",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "macos": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-macos",
+    "web": "react-scripts start",
     "test": "jest",
-    "lint": "eslint .",
-    "start:macos": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-macos"
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "16.9.0",
+    "react-dom": "16.9.0",
     "react-native": "0.61.5",
     "react-native-macos": "^0.61.0-0",
-    "react-native-windows": "0.61.14"
+    "react-native-web": "^0.12.3",
+    "react-native-windows": "0.61.14",
+    "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -28,5 +32,17 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
